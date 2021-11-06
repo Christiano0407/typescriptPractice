@@ -23,6 +23,10 @@ body {
   background: #e0e0ee;
   color: #1d1d1d;
 }
+main {
+  width: 100%;
+  height: 100vh;
+}
 .container {
   width: 90%;
   max-width: 1000px;
@@ -33,7 +37,19 @@ body {
   gap: 4rem;
   border: 2px solid red;
 }
-
+.container .movie {
+  text-align: center;
+}
+.container .movie .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+/*container/movie/poster*/
+.container .movie .poster {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+}
 .pagination {
   position: fixed;
   bottom: 0;
