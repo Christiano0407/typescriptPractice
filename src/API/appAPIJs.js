@@ -1,3 +1,24 @@
+// Page / página>
+let page = 1;
+// Buttons
+const btnBefore = document.getElementById(`btnBefore`);
+const btnAfter = document.getElementById(`btnAfter`);
+// Events Buttons >>>
+btnAfter.addEventListener(`click`, () => {
+  // SUMAR PÁGINA >>
+  if (page < 1000) {
+    page += 1;
+    addMovies(); // Agregar las páginas>>>
+  }
+});
+
+btnBefore.addEventListener(`click`, () => {
+  if (page > 1) {
+    page -= 1;
+    addMovies();
+  }
+});
+
 // Cargar Películas>>
 // TMDB: c66eb9e2b42b5d1d179fff7ac34ce71f (Clave)
 //(A)
@@ -5,9 +26,9 @@ const addMovies = async () => {
   try {
     // Conectar con la API> / Respuesta a la Petición>>
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=c66eb9e2b42b5d1d179fff7ac34ce71f&language=es-MX`
+      `https://api.themoviedb.org/3/movie/popular?api_key=c66eb9e2b42b5d1d179fff7ac34ce71f&language=es-MX&page=${page}`
     );
-    console.log(response);
+    //console.log(response);
     // Promesa>
 
     //(C) Status / Si la respuesta es correcta >
@@ -23,7 +44,7 @@ const addMovies = async () => {
         </div>`;
       });
 
-      //> Agregar a HTML>>>
+      //> Agregar a HTML>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       document.getElementById(`container`).innerHTML = movies;
       // Status>>>
     } else if (response.status === 401) {
@@ -37,5 +58,5 @@ const addMovies = async () => {
     console.log(error);
   }
 };
-
+//>Llamar>
 addMovies();

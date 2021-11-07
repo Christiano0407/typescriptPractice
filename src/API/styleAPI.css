@@ -23,9 +23,18 @@ body {
   background: #e0e0ee;
   color: #1d1d1d;
 }
+header {
+  width: 100%;
+  background: #1d1d1d;
+  padding: 1rem;
+  margin: 0 auto;
+  height: 5rem;
+}
 main {
   width: 100%;
-  height: 100vh;
+  /*height: 100vh*/
+  display: flex;
+  justify-content: center;
 }
 .container {
   width: 90%;
@@ -35,7 +44,8 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4rem;
-  border: 2px solid red;
+  padding: 1rem;
+  /* border: 2px solid red; */
 }
 .container .movie {
   text-align: center;
@@ -49,6 +59,12 @@ main {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 1.5rem;
+}
+.poster:hover {
+  transform: scale(1.2);
+}
+.poster:active {
+  transform: scale(1);
 }
 .pagination {
   position: fixed;
