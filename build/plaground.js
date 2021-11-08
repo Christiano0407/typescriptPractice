@@ -20,3 +20,19 @@ randomValue.toUpperCase();
 if (typeof randomValue === "string") {
     randomValue.toLocaleLowerCase();
 }
+//>>>
+var multiValue = 10;
+multiValue = "Alma";
+multiValue.toUpperCase();
+//>>>
+function add(x, y) {
+    if (typeof x === "number" && typeof y === "number") {
+        return x + y;
+    }
+    if (typeof x === "string" && typeof y === "string") {
+        return x + y;
+    }
+    throw new Error("Error!!");
+}
+console.log(add(5, 2));
+console.log(add("Plus", "Channel"));

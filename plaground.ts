@@ -22,3 +22,22 @@ randomValue = `Mateo`;
 if (typeof randomValue === "string") {
   randomValue.toLocaleLowerCase();
 }
+
+//>>>
+let multiValue: number | string = 10;
+multiValue = "Alma";
+multiValue.toUpperCase();
+
+//>>>
+function add(x: number | string, y: number | string) {
+  if (typeof x === `number` && typeof y === `number`) {
+    return x + y;
+  }
+  if (typeof x === `string` && typeof y === `string`) {
+    return x + y;
+  }
+
+  throw new Error("Error!!");
+}
+console.log(add(5, 2));
+console.log(add("Plus", "Channel"));
