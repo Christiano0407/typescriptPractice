@@ -11,3 +11,12 @@ var ContractStatus;
 })(ContractStatus || (ContractStatus = {}));
 var employStatus = ContractStatus.temp;
 console.log(employStatus);
+//
+var randomValue = 10;
+randomValue = true;
+randomValue = "Mateo";
+randomValue.toUpperCase();
+randomValue.toUpperCase();
+if (typeof randomValue === "string") {
+    randomValue.toLocaleLowerCase();
+}

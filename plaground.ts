@@ -10,3 +10,15 @@ enum ContractStatus {
 
 const employStatus = ContractStatus.temp;
 console.log(employStatus);
+
+//
+let randomValue: unknown = 10;
+randomValue = true;
+randomValue = `Mateo`;
+
+(randomValue as string).toUpperCase();
+(<string>randomValue).toUpperCase();
+
+if (typeof randomValue === "string") {
+  randomValue.toLocaleLowerCase();
+}
