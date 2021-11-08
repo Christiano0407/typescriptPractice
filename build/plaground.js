@@ -36,3 +36,9 @@ function add(x, y) {
 }
 console.log(add(5, 2));
 console.log(add("Plus", "Channel"));
+var person = {
+    employId: 5,
+    age: 10,
+    stockPlan: true,
+};
+console.log(person);

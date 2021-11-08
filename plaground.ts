@@ -41,3 +41,21 @@ function add(x: number | string, y: number | string) {
 }
 console.log(add(5, 2));
 console.log(add("Plus", "Channel"));
+
+// >>>>>
+interface Employ {
+  employId: number;
+  age: number;
+}
+
+interface Manager {
+  stockPlan: boolean;
+}
+
+const person: Employ & Manager = {
+  employId: 5,
+  age: 10,
+  stockPlan: true,
+};
+
+console.log(person);
